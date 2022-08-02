@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/indexStyle.css">
+    <script src="https://kit.fontawesome.com/8ec458b953.js" crossorigin="anonymous"></script>
+    <title>ToDoList</title>
+    <!--https://www.youtube.com/watch?v=cOUNOi297Mw 참고하기좋은 영상-->
+</head>
+<body class="body">
+
+    </div>
+    <div class="ToDoList">
+    <ul class="zeroOpacity" id="todo-list"></ul>    <!--ToDoList--> 
+    </div>
+
+
+<div class="container">
+<!--------------------------------------------------------------->     
+    <div class="header">
+        
+
+        <div id="weather">                                <!--weather-->
+            <span class="zeroOpacity"></span>
+            <span class="zeroOpacity"></span>
+            <span class="greeting zeroOpacity"></span>    <!--greeting-->
+            <button class="delName zeroOpacity"><i class="fa-solid fa-square-xmark"></i></button>
+          </div>    
+
+        <div class="Hclock zeroOpacity" id="HEAFERClock"> 
+        <h1 class="headerclock">00:00:00</h1>              <!--headerClock-->
+        <h2 class="headerdate" >00.00.00</h2> 
+        
+        </div>
+
+        <from id="setBoxcolor">     <!--setBoxcolor-->                   
+            <input class="makeBottn" type='color' id='inputBoxcolor' value='#a4ecdf'>
+        </from>
+
+        <from id="setTextColor">    <!--setTextColor-->                   
+            <input class="makeBottn" type='color' id='inputTextcolor' value='#000'>
+        </from>
+
+        <from id="setBgColor">      <!--setBgColor-->                   
+            <input class="makeBottn" type='color' id='inputBgColor' value='#ffffff'>
+        </from>
+
+
+    </div>
+<!--------------------------------------------------------------->  
+    <div class="menu">                    
+    </div>
+<!--------------------------------------------------------------->   
+    <div class="main"> 
+        <h1 class="clock"></h1>                      <!--clock-->
+        <h2 class="date" >00.00.00</h2>        
+        <form class="hidden" id="login-form">    <!--login-form-->
+            <input class="nameInput"
+                required
+                maxlength="30"
+                type="text" 
+                placeholder="name" 
+                />
+        </form>
+    </div>
+<!--------------------------------------------------------------->  
+    <div class="top">
+        <div class="ToDoFormList">
+            
+            <form class="zeroOpacity" id="todo-form">       <!--ToDoForm--> 
+                <input
+                   type="text" 
+                   placeholder="Write Anything" 
+                   required
+                   maxlength="25"
+                   />
+              </form>
+            
+            </div>
+    </div>
+<!--------------------------------------------------------------->      
+    <div class="aside"></div>
+<!---------------------------------------------------------------> 
+    <div class="bottom">        
+    </div>
+<!---------------------------------------------------------------> 
+    <div class="footer">  
+        <div class="quoteAuthor zeroOpacity" id="quote">  <!--quote-->
+            <span class="Quote" ></span>
+            <span class="Author"></span>
+          </div>     
+    </div>
+<!---------------------------------------------------------------> 
+</div> 
+    <!--scripts--------------------------------------------------------->  
+    <div id="scripts">                           
+    <script src="/JS/Login.js"></script>
+    <script src="/JS/Clock.js"></script>
+    <script src="/JS/Quotes.js"></script>
+    <script src="/JS/Background.js"></script>
+    <script src="/JS/ToDoList.js"></script>
+    <script src="/JS/Weather.js"></script>
+    <script src="/JS/test.js"></script>
+    </div>
+    <!--scripts--------------------------------------------------------->  
+</body>
+</html>

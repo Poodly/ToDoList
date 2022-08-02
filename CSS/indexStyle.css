@@ -1,0 +1,389 @@
+/* -----------------------------------------------------------------------*/
+/* <font> ----------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+@font-face {
+    font-family: DigitalFont;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -----------------------------------------------------------------------*/
+/* <hidden> --------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+.hiddenZeroOpacity {
+    display:  none;    /* className을 주면, 그 요소를 숨기게된다. */ 
+    opacity: 0;           
+}
+
+.hidden {
+    display:  none;    
+}
+
+.ToDoHidden {
+    display:  none;    
+}
+
+#hidden {
+    display:  none;             
+}
+
+
+/* -----------------------------------------------------------------------*/
+/* <elemnt> --------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    font-family:'LAB디지털', DigitalFont
+}
+
+ul {
+    list-style  :none;           
+}
+
+li {
+    display: grid;
+    grid-template-columns: 37px 336px 30px;
+    grid-template-rows: auto;
+    list-style:none;
+    padding: 2px 0px;  
+    cursor: pointer;      
+}
+
+.eimozComplet:active{
+    margin-top: 3px;
+    
+}
+
+/* -----------------------------------------------------------------------*/
+/* <transition> ----------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+.opacity {    
+    opacity:0;
+    transition: opacity 0.7s linear;
+}
+
+.opacity2 {    
+    opacity:0;
+    transition: opacity 0.4s linear;
+}
+
+.zeroOpacity {
+    opacity: 0;
+}
+
+#ZzeroOpacity {
+    opacity: 0;
+}
+
+.opacityRevers {    
+    opacity:1;
+    transition: opacity 1s linear;
+}
+
+/* -----------------------------------------------------------------------*/
+/* <Input> ---------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+/* https://xsop.tistory.com/35 */
+.nameInput {  
+    width: 100px;
+    height: 25px;
+    font-size: 12px;
+    border: 0;
+    border-radius: 16px;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 115px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #a4ecdf;
+}
+
+#HEAFERClock {
+    display: grid;
+    grid-template-columns: 135px;
+    grid-template-rows: 45px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.headerclock {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.headerdate {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+
+.clock {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+.date {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 11px;
+}
+
+#weather{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: sans-serif;
+    /*grid-template-columns: 1fr;
+    margin-left: 100;
+    grid-template-rows: 50px;*/
+}
+
+.greeting{
+    margin-top: 1px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.delName{
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 1000;
+    background-color: #68519f00;
+    /*color: #000000;*/
+    height: 20px;
+    width: 20px;
+    border: 0px;
+    cursor: pointer;
+    padding: 0px; 
+    
+}
+.delName:active{
+    margin-top: 5px;
+}
+
+
+/* https://ungdoli0916.tistory.com/875 CSS아래에서 위로 올라오며 페이드인(fade in) 되는 애니메이션 */
+/*
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+*/
+
+#quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 16px;
+    /*position: relative;
+    animation: fadeInUp 1s;*/
+}
+
+
+.Quote {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 0px;
+}
+
+
+.Author {
+    font-size: 17px;
+    font-family: sans-serif;
+    
+}
+/* -----------------------------------------------------------------------*/
+/* <Bottns> --------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+.makeBottn {
+/* https://www.youtube.com/watch?v=9Ds6dzhda0c --> 버튼 모양 만들기 튜토리얼 영상
+   https://homzzang.com/b/css-247*/
+    -moz-appearance:none;     /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+   
+    appearance: none;         /* 화살표 없애기 공통*/
+    background-color: transparent;
+    width: 30px;
+    height: 31px;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+    margin-top: 3px; 
+}
+.makeBottn::-webkit-color-swatch{
+    border-radius: 50%;
+    border: 1.2px solid rgb(60, 60, 60);
+}
+.makeBottn::-moz-color-swatch{
+    border-radius: 50%;
+    border: 1.2px solid rgb(60, 60, 60);
+}
+
+
+
+/* -----------------------------------------------------------------------*/
+/* <ToDoList> ------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/ 
+
+.ToDoFormList{
+    display: grid;
+    grid-template-columns: 600px;
+    
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    margin-top: 9px;
+}
+
+#todo-form{
+    margin: 15px;
+}
+#todo-form input{
+    opacity: 0.7;
+    position: relative;
+    width: 400px;
+    height: 30px;
+    font-size: 14px;
+    border: 0;
+    border-radius: 16px;
+    outline: none;
+    padding: 2px 10px;
+    background-color: #90e3d4;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    
+}
+#todo-form input:hover{
+    opacity: 1;
+    transition: 0.3s ease-in-out
+}
+
+
+
+.ToDoList{
+    display: flex;
+    justify-content: center;
+}
+
+#todo-list{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: #90e3d4b6;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    width: 400px;
+    position: absolute;
+    padding: 20px 10px;
+    margin-top: 165px;
+    
+}
+
+#todo-list button{
+    font-size: 100%;
+    font-family: sans-serif;
+    background-color: #68519f00;
+    /*color: #000000;*/
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: inherit;  /* 이게 뭘까...*/
+    
+    padding-left: 0px;
+}
+.Xcolor{
+    color: rgb(0, 0, 0);
+}
+
+.completed{
+    text-decoration: line-through;
+}
+.completedOpacity{
+    opacity: 0.5;
+}
+
+/* -----------------------------------------------------------------------*/
+/* <grids> ---------------------------------------------------------------*/
+/* -----------------------------------------------------------------------*/
+.container {
+    display: grid;
+    height: 100vh;  /* height: 100vh; 꽉 채우기 */
+    grid-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr;       /* 세로 */ /* fr은 화면에 따라 변하는것, px은 고정됨. */  
+    /* 200px(menu) 1fr(main) 200px(top) */ 
+    grid-template-rows: 90px 50px 1fr 50px ;  /* 가로 */                     
+    /* 100px(header) 150px(top) 1fr(aside) 150px(bottom) 100px(footer) */
+    grid-template-areas: 
+    'header header header'
+    'top top top'
+    'main main main'
+    
+    'footer footer footer';
+}
+.container div {
+    background-color: #ffffff00;
+    /*padding: 0px;*/
+    /*border: 1px solid rgb(187, 39, 39);*/
+    display: grid;
+    /*text-align: center;*/
+}
+.header {
+    grid-area: header;
+    grid-template-columns: 1fr 1.06fr 30px 30px 30px;
+    grid-template-rows: 50px 50px 50px;
+    /*justify-items: end;*/
+    padding-top: 8px;
+    padding-right: 12px;
+}
+
+.menu   {
+    grid-area: menu;
+}
+
+.main   {
+    grid-area: main;
+    grid-template-rows: 50px;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 140px;
+}
+.top    {
+    grid-area: top;
+    
+}
+.aside  {
+    grid-area: aside;
+}
+.bottom {
+    grid-area: bottom;
+}
+.footer {
+    grid-area: footer;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
