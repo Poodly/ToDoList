@@ -12,7 +12,7 @@ BackgroundColorChange.onchange = function(){
     console.log(this.value);  
 }
 
-const savedBgColor = localStorage.getItem(BGCOLOR_KEY); 
+const savedBgColor = localStorage.getItem(BGCOLOR_KEY);    //localStorage
 
 if (savedBgColor === null) {
     BODY.style.backgroundColor = "#ffffff";
@@ -22,7 +22,6 @@ if (savedBgColor === null) {
 }
 
 // -<Textcolor>-------------------------------------------------------------------------------- //
-
 const TextColorChange = document.getElementById("inputTextcolor"); 
 const NameInput       = document.querySelector(".nameInput")
 const DelNameButton   = document.querySelector(".delName")
@@ -39,7 +38,7 @@ TextColorChange.onchange = function(){
     console.log(this.value);  
 }
 
-const savedTextColor = localStorage.getItem(TEXTCOLOR_KEY); 
+const savedTextColor = localStorage.getItem(TEXTCOLOR_KEY);  //localStorage
 
 if (savedTextColor === null) {
     BODY.style.color = "#000";
@@ -50,11 +49,9 @@ if (savedTextColor === null) {
     NameInput.style.color = savedTextColor;
     DelNameButton.style.color = savedTextColor;
     document.querySelector("#inputTextcolor").value = savedTextColor
-    
 }
 
 // -<Boxcolor>------------------------------------------------------------------------------- //
-
 const BoxColorChange = document.getElementById("inputBoxcolor") 
 const toDoFormBoxColor = document.querySelector("#todo-form input")
 const toDOListColor = document.querySelector("#todo-list")
@@ -71,7 +68,7 @@ BoxColorChange.onchange = function(){
     console.log(this.value);  
 }
 
-const savedBoxColor = localStorage.getItem(BOXCOLOR_KEY); 
+const savedBoxColor = localStorage.getItem(BOXCOLOR_KEY);   //localStorage
 
 if (savedBoxColor === null) {
     NameInput.style.backgroundColor = "#90e3d4b6"; 

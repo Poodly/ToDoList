@@ -12,7 +12,7 @@ const quoteAuthor  = document.querySelector(".quoteAuthor");
 const onToDoForm   = document.getElementById("todo-form");   
 const onToDoList   = document.getElementById("todo-list");   
 const DelBox       = document.querySelector(".delName")
- // ------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------
 const HIDDEN_CLASS  = "hidden";                      
 const OPACITY2      = "opacity2"; 
 const OPACITYREVERS = "opacityRevers"; 
@@ -23,7 +23,7 @@ const USERNAME_KEY  = "username";
 
 // function ---------------------------------------------------------------------------------------------------------
 function onLoginSubmit(event) {
-   event.preventDefault();                        //preventDefault()  (브라우저의 기본 동작을 막는다.- ex.새로고침)
+   event.preventDefault();                       
    
    loginForm.classList.add(OPACITY2);
    setTimeout(function(){loginForm.classList.add(HIDDEN_CLASS)}, 500); 
@@ -66,9 +66,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username){
- 
-   //console.log(greeting, username);
-   greeting.innerText = `Hello ${username}`; // = "Hello " + username; `~${}`
+   greeting.innerText = `Hello ${username}`;
    greeting.classList.remove(HIDDEN_CLASS);
 }
 
@@ -86,49 +84,50 @@ if (savedUsername === null) {
    paintGreetings(savedUsername);                       
 }
 
-// logout //
+/// -<logout>- ///
 const USERNAME_KEY2  = "username"; 
 const DelButton   = document.querySelector(".delName")
 
 function logoutClick() {
-    localStorage.removeItem(USERNAME_KEY2);
+   localStorage.removeItem(USERNAME_KEY2);
  
-    loginForm.classList.remove(OPACITY2);            //로그인창 나타나게
+   loginForm.classList.remove(OPACITY2);            //로그인창 나타나게
    setTimeout(function(){loginForm.classList.remove(HIDDEN_CLASS)}, 0); 
 
-   clock2.classList.remove(OPACITY2);                //시계 나타나게
+   clock2.classList.remove(OPACITY2);               //시계 나타나게
    setTimeout(function(){clock2.classList.remove(HIDDEN_CLASS)}, 0); 
 
-   date2.classList.remove(OPACITY2);                 //날짜 요일 나타나게
+   date2.classList.remove(OPACITY2);                //날짜 요일 나타나게
    setTimeout(function(){date2.classList.remove(HIDDEN_CLASS)}, 0);
 //--------------------------------------------------------------------------- 
 
-   weathers.classList.remove(OPACITYREVERS);         //날씨, 온도 사라지게
+   weathers.classList.remove(OPACITYREVERS);        //날씨, 온도 사라지게
    setTimeout(function(){weathers.classList.add(ZEROOPACITY)}, 0);
 
-   city.classList.remove(OPACITYREVERS);             //도시 사라지게
+   city.classList.remove(OPACITYREVERS);            //도시 사라지게
    setTimeout(function(){city.classList.add(ZEROOPACITY)}, 0);
 
-   HClock1.classList.remove(OPACITYREVERS);          //header 시계 사라지게
+   HClock1.classList.remove(OPACITYREVERS);         //header 시계 사라지게
    setTimeout(function(){HClock1.classList.add(ZEROOPACITY)}, 0);
 
-   quoteAuthor.classList.remove(OPACITYREVERS);       //명언 사라지게
+   quoteAuthor.classList.remove(OPACITYREVERS);     //명언 사라지게
    setTimeout(function(){quoteAuthor.classList.add(ZEROOPACITY)}, 0);
 
-   greeting.classList.remove(OPACITYREVERS);          //인사+ 이름 사라지게
+   greeting.classList.remove(OPACITYREVERS);        //인사+ 이름 사라지게
    setTimeout(function(){greeting.classList.add(ZEROOPACITY)}, 0);
 
-   onToDoForm.classList.remove(OPACITYREVERS);         //ToDoForm 사라지게
+   onToDoForm.classList.remove(OPACITYREVERS);      //ToDoForm 사라지게
    setTimeout(function(){onToDoForm.classList.add(ZEROOPACITY)}, 0);
 
-   onToDoList.classList.remove(OPACITYREVERS);         //List 사라지게
+   onToDoList.classList.remove(OPACITYREVERS);      //List 사라지게
    setTimeout(function(){onToDoList.classList.add(ZEROOPACITY)}, 0);
 
-   DelBox.classList.remove(OPACITYREVERS);         //이름 삭제버튼 사라지게
+   DelBox.classList.remove(OPACITYREVERS);          //이름 삭제버튼 사라지게
    setTimeout(function(){weathers.classList.add(ZEROOPACITY)}, 0);
 }
+
 DelButton.addEventListener("click", logoutClick);
-if (savedUsername != null) {
+   if(savedUsername != null) {
    //loginForm.classList.add(OPACITY2);             // 로그인창 사라지게
    setTimeout(function(){loginForm.classList.add(HIDDEN_CLASS)}, 0); 
 
@@ -138,19 +137,19 @@ if (savedUsername != null) {
    //date2.classList.add(OPACITY2);                 //날짜 요일도 사라지게
    setTimeout(function(){date2.classList.add(HIDDEN_CLASS)}, 0);
    //---------------------------------------------------------------------------   
-   weathers.classList.add(OPACITYREVERS);         //날씨, 온도 나타나게
+   weathers.classList.add(OPACITYREVERS);           //날씨, 온도 나타나게
    setTimeout(function(){weathers.classList.remove(ZEROOPACITY)}, 0);
 
-   city.classList.add(OPACITYREVERS);             //도시 나타나게
+   city.classList.add(OPACITYREVERS);               //도시 나타나게
    setTimeout(function(){city.classList.remove(ZEROOPACITY)}, 0);
 
-   HClock1.classList.add(OPACITYREVERS);          //header 시계 나타나게
+   HClock1.classList.add(OPACITYREVERS);            //header 시계 나타나게
    setTimeout(function(){HClock1.classList.remove(ZEROOPACITY)}, 0);
 
-   quoteAuthor.classList.add(OPACITYREVERS);       //명언 나타나게
+   quoteAuthor.classList.add(OPACITYREVERS);        //명언 나타나게
    setTimeout(function(){quoteAuthor.classList.remove(ZEROOPACITY)}, 0);
 
-   greeting.classList.add(OPACITYREVERS);          //인사+ 이름 나타나게
+   greeting.classList.add(OPACITYREVERS);           //인사+ 이름 나타나게
    setTimeout(function(){greeting.classList.remove(ZEROOPACITY)}, 0);
 
    onToDoForm.classList.add(OPACITYREVERS);         //ToDoForm 나타나게
@@ -159,9 +158,8 @@ if (savedUsername != null) {
    onToDoList.classList.add(OPACITYREVERS);         //List 나타나게
    setTimeout(function(){onToDoList.classList.remove(ZEROOPACITY)}, 0);
 
-   DelBox.classList.add(OPACITYREVERS);         //이름 삭제버튼 나타나게
+   DelBox.classList.add(OPACITYREVERS);             //이름 삭제버튼 나타나게
    setTimeout(function(){weathers.classList.remove(ZEROOPACITY)}, 0);
-   
 }
 
 

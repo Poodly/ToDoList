@@ -1,5 +1,4 @@
 // -<Quotes>- //
-//array 여야 한다.
 const quotes = [
     {
         quotes: "- There is a difference between knowing the path and walking the path -",
@@ -45,7 +44,6 @@ const quotes = [
 
 const quote  = document.querySelector("#quote span:first-child"); //span1
 const author = document.querySelector("#quote span:last-child");  //span2
-
 
 const todaysQuote = (quotes[Math.floor(Math.random() * quotes.length)]); 
 

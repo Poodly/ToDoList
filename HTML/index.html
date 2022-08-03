@@ -5,21 +5,15 @@
     <link rel="stylesheet" href="/CSS/indexStyle.css">
     <script src="https://kit.fontawesome.com/8ec458b953.js" crossorigin="anonymous"></script>
     <title>ToDoList</title>
-    <!--https://www.youtube.com/watch?v=cOUNOi297Mw 참고하기좋은 영상-->
 </head>
 <body class="body">
-
+    <div>
+    <div class="ToDoList">                                <!--ToDoList--> 
+    <ul class="zeroOpacity" id="todo-list"></ul>    
     </div>
-    <div class="ToDoList">
-    <ul class="zeroOpacity" id="todo-list"></ul>    <!--ToDoList--> 
-    </div>
-
-
 <div class="container">
 <!--------------------------------------------------------------->     
     <div class="header">
-        
-
         <div id="weather">                                <!--weather-->
             <span class="zeroOpacity"></span>
             <span class="zeroOpacity"></span>
@@ -27,10 +21,9 @@
             <button class="delName zeroOpacity"><i class="fa-solid fa-square-xmark"></i></button>
           </div>    
 
-        <div class="Hclock zeroOpacity" id="HEAFERClock"> 
-        <h1 class="headerclock">00:00:00</h1>              <!--headerClock-->
+        <div class="Hclock zeroOpacity" id="HEAFERClock"> <!--headerClock-->
+        <h1 class="headerclock">00:00:00</h1>             
         <h2 class="headerdate" >00.00.00</h2> 
-        
         </div>
 
         <from id="setBoxcolor">     <!--setBoxcolor-->                   
@@ -44,17 +37,15 @@
         <from id="setBgColor">      <!--setBgColor-->                   
             <input class="makeBottn" type='color' id='inputBgColor' value='#ffffff'>
         </from>
-
-
     </div>
 <!--------------------------------------------------------------->  
     <div class="menu">                    
     </div>
 <!--------------------------------------------------------------->   
     <div class="main"> 
-        <h1 class="clock"></h1>                      <!--clock-->
+        <h1 class="clock"></h1>                           <!--clock-->
         <h2 class="date" >00.00.00</h2>        
-        <form class="hidden" id="login-form">    <!--login-form-->
+        <form class="hidden" id="login-form">             <!--login-form-->
             <input class="nameInput"
                 required
                 maxlength="30"
@@ -66,17 +57,15 @@
 <!--------------------------------------------------------------->  
     <div class="top">
         <div class="ToDoFormList">
-            
-            <form class="zeroOpacity" id="todo-form">       <!--ToDoForm--> 
-                <input
-                   type="text" 
-                   placeholder="Write Anything" 
-                   required
-                   maxlength="25"
-                   />
-              </form>
-            
-            </div>
+        <form class="zeroOpacity" id="todo-form">        <!--ToDoForm--> 
+            <input
+                type="text" 
+                placeholder="Write Anything" 
+                required
+                maxlength="25"
+                />
+            </form>
+        </div>
     </div>
 <!--------------------------------------------------------------->      
     <div class="aside"></div>
@@ -97,10 +86,9 @@
     <script src="/JS/Login.js"></script>
     <script src="/JS/Clock.js"></script>
     <script src="/JS/Quotes.js"></script>
-    <script src="/JS/Background.js"></script>
+    <script src="/JS/ChangeColors.js"></script>
     <script src="/JS/ToDoList.js"></script>
     <script src="/JS/Weather.js"></script>
-    <script src="/JS/test.js"></script>
     </div>
     <!--scripts--------------------------------------------------------->  
 </body>
